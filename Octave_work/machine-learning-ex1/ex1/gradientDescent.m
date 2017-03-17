@@ -16,8 +16,9 @@ for iter = 1:num_iters
     % Hint: While debugging, it can be useful to print out the values
     %       of the cost function (computeCost) and gradient here.
     %
-
-
+    copy_theta = theta;
+    theta(1,1) = copy_theta(1,1) - (alpha/m)*((X*copy_theta - y)'*X(:,1));
+    theta(2,1) = copy_theta(2,1) - (alpha/m)*((X*copy_theta - y)'*X(:,2));
 
 
 
